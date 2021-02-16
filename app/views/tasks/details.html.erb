@@ -1,0 +1,12 @@
+<h2><%= @tasks.title %></h2>
+<ul>
+<li><%= @tasks.details %></li>
+<li><% if @tasks.completed%>
+      <%= '✔ done'%>
+      <% else %>
+      <%=' ❌not done' %>
+      <% end %>
+      </li>
+</ul>
+<button type="button"><%= link_to 'back to list', tasks_path %></button>
+<button type="button"><%= link_to 'Edit', edit_path %></button>
